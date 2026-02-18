@@ -3,7 +3,7 @@
 # FILENAME: decision_tree.py
 # SPECIFICATION: Derive a depth-2 decision tree to classify the contact lens data set
 # FOR: CS 4210- Assignment #1
-# TIME SPENT: how long it took you to complete the assignment
+# TIME SPENT: 2 hours
 #-----------------------------------------------------------*/
 
 #IMPORTANT NOTE: DO NOT USE ANY ADVANCED PYTHON LIBRARY TO COMPLETE THIS CODE SUCH AS numpy OR pandas. You have to work here only with standard
@@ -59,4 +59,5 @@ clf = clf.fit(X, Y)
 
 #plotting decision tree
 tree.plot_tree(clf, feature_names=['Age', 'Spectacle', 'Astigmatism', 'Tear'], class_names=['Yes','No'], filled=True, rounded=True)
+
 plt.show()
