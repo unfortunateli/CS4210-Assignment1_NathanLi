@@ -3,7 +3,7 @@
 # FILENAME: knn.py
 # SPECIFICATION: a program to classify emails using the K-Nearest Neighbors algorithm based on the data provided in the file 'email_classification.csv'
 # FOR: CS 4210- Assignment #2
-# TIME SPENT: how long it took you to complete the assignment
+# TIME SPENT: 30 minutes
 #-----------------------------------------------------------*/
 
 #IMPORTANT NOTE: YOU ARE ALLOWED TO USE ANY PYTHON LIBRARY TO COMPLETE THIS PROGRAM
@@ -70,6 +70,7 @@ for i in db:
 #--> add your Python code here
 errorRate = errorCount / len(db)
 print("Error rate:", errorRate)
+
 
 
 
