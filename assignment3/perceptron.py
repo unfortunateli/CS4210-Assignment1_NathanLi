@@ -80,6 +80,16 @@ for learning_rate in n:  #iterates over n
             correct = 0
             total = 0
 
+         
+
+
+            # Update and print highest accuracy so far for each classifier
+
+            #make the classifier prediction for each test sample and start computing its accuracy
+            #hint: to iterate over two collections simultaneously with zip() Example:
+            #for (x_testSample, y_testSample) in zip(X_test, y_test):
+            #to make a prediction do: clf.predict([x_testSample])
+            #--> add your Python code here
             for (x_testSample, y_testSample) in zip(X_test, y_test):
                 prediction = clf.predict([x_testSample])[0]
 
@@ -88,10 +98,13 @@ for learning_rate in n:  #iterates over n
 
                 total += 1
 
-            accuracy = correct / total            
+            accuracy = correct / total               
 
-
-            # Update and print highest accuracy so far for each classifier
+            #check if the calculated accuracy is higher than the previously one calculated for each classifier. If so, update the highest accuracy
+            #and print it together with the network hyperparameters
+            #Example: "Highest Perceptron accuracy so far: 0.88, Parameters: learning rate=0.01, shuffle=True"
+            #Example: "Highest MLP accuracy so far: 0.90, Parameters: learning rate=0.02, shuffle=False"
+            #--> add your Python code here
             if algorithm == 'Perceptron' and accuracy > highest_perceptron:
                 highest_perceptron = accuracy
                 print(f'Highest Perceptron accuracy so far: {accuracy:.4f}, '
@@ -100,18 +113,7 @@ for learning_rate in n:  #iterates over n
             elif algorithm == 'MLP' and accuracy > highest_mlp:
                 highest_mlp = accuracy
                 print(f'Highest MLP accuracy so far: {accuracy:.4f}, '
-                      f'Parameters: learning rate={learning_rate}, shuffle={shuffle_value}')
-            #make the classifier prediction for each test sample and start computing its accuracy
-            #hint: to iterate over two collections simultaneously with zip() Example:
-            #for (x_testSample, y_testSample) in zip(X_test, y_test):
-            #to make a prediction do: clf.predict([x_testSample])
-            #--> add your Python code here
-
-            #check if the calculated accuracy is higher than the previously one calculated for each classifier. If so, update the highest accuracy
-            #and print it together with the network hyperparameters
-            #Example: "Highest Perceptron accuracy so far: 0.88, Parameters: learning rate=0.01, shuffle=True"
-            #Example: "Highest MLP accuracy so far: 0.90, Parameters: learning rate=0.02, shuffle=False"
-            #--> add your Python code here
+                      f'Parameters: learning rate={learning_rate}, shuffle={shuffle_value}')            
 
 
 
